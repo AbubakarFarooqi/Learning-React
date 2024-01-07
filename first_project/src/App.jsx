@@ -7,4 +7,8 @@ function App() {
   )
 }
 
-export default App
+
+export default App 
+// export default {App,X} 
+// export default x
+
