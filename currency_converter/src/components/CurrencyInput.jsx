@@ -6,6 +6,7 @@ function CurrencyInput({
     onAmountChange,
     // currency,
     onCurrencyChange,
+    selectedCurrency,
     currencyOptions = []
 }) {
     const inputId = useId();
@@ -38,7 +39,10 @@ function CurrencyInput({
                            dark:placeholder-gray-400
                             dark:text-balance   
                              dark:focus:ring-blue-500
-                              dark:focus:border-blue-500">
+                              dark:focus:border-blue-500"
+                        value={selectedCurrency}
+                        onChange={(e) => { onCurrencyChange && onCurrencyChange(e.target.value) }}
+                    >
 
                         {
                             currencyOptions.map((value) => (

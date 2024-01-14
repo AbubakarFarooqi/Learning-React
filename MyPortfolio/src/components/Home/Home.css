@@ -1,0 +1,36 @@
+:root {
+    --backgroundColor: #1D2228;
+    --secondaryColor: #FB8122;
+    --textColor: #E1E2E2;
+}
+
+.card {
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    margin-right: 2px;
+    width: 600px;
+    background-color: var(--backgroundColor);
+    border-color: var(--secondaryColor);
+    color: var(--textColor);
+    box-shadow: 1px 1px 15px 2px var(--secondaryColor);
+    border-radius: 20px 0 20px 0;
+    height: 400px;
+}
+
+.my-name {
+    color: var(--secondaryColor);
+    text-align: center;
+    font-size: 45px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight: bold;
+}
+
+
+.my-intro {
+    color: var(--textColor);
+    text-align: justify;
+    font-size: 18px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-weight: bold; */
+}

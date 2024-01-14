@@ -25,6 +25,8 @@ function App() {
               amount="300"
               amounti={amount}
               currencyOptions={options}
+              onCurrencyChange={(value) => setCurrencyFrom(value)}
+              selectedCurrency={currencyFrom}
               onAmountChange={(value) => setAmount(value)} />
             <div className='-m-1 flex items-center justify-center  z-0'>
               <button onClick={swap} type="button"
@@ -32,7 +34,14 @@ function App() {
                 swap
               </button>
             </div>
-            <CurrencyInput label="To" amount="300" amounti={convertedAmount} currencyOptions={options} />
+            <CurrencyInput
+              label="To"
+              amount="300"
+              amounti={convertedAmount}
+              currencyOptions={options}
+              onCurrencyChange={(value) => setCurrencyTo(value)}
+              selectedCurrency={currencyTo}
+            />
             <button onClick={swap} type="button"
               class="mt-6 w-full text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
               Convert {currencyFrom} to {currencyTo}
