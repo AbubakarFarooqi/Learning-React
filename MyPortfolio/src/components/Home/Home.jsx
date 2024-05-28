@@ -5,7 +5,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Home.css'
 import { useAnimation } from 'framer-motion';
+import { Avatar } from '@mui/material';
 function Home() {
+
 
     // const myName = "Hello! This is Muhammad Abubakar".split(" ");
     const myName = ["M", "u", "h", "a", "m", "m", "a", "d", " ", "A", "b", "u", "b", "a", "k", "a", "r",]
@@ -21,70 +23,96 @@ function Home() {
 
     return (
         <>
-            <motion.div
 
-                animate={{ x: 100 }}
-                transition={{ duration: 0.7 }}
-                onAnimationComplete={() => setIsDisplayName(true)}
-            >
-                {/* <Card style={{ width: '18rem' }}> */}
-                <Card className='card'>
-                    <Card.Body>
+            <div className='h-screen'>
+                <div className='containerc h-full'>
 
-                        {
-                            isDisplayName && (
 
-                                <div className='my-name' style={{ display: isDisplayName }}>
+                    <motion.div
 
-                                    {myName.map((el, i) => {
-                                        return (
-                                            <motion.span
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{
-                                                    duration: 0.15,
-                                                    delay: i / 20
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 100 }}
+                        transition={{ duration: 0.90, delay: 1 / 20 }}
 
-                                                }}
-                                                onAnimationComplete={() => { console.log("azann"); }}
 
-                                                key={i}
-                                            >
-                                                {el}{""}
-                                            </motion.span>
-                                        )
-                                    })}
+                    >
+
+
+                        <Avatar className='my-image'
+                            alt="Remy Sharp"
+                            src="src\images\pic.png"
+
+                        />
+                    </motion.div>
 
 
 
-                                </div>
-                            )
-                        }
-                        {
-                            isNameDisplayed && (
-                                <motion.div
+                    <motion.div
 
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{
-                                        ease: "easeIn",
-                                        duration: 0.5,
-                                    }}
+                        initial={{ x: 0 }}
+                        animate={{ x: 10 }}
+                        transition={{ duration: 0.7 }}
+                        onAnimationComplete={() => setIsDisplayName(true)}
+                    >
+                        {/* <Card style={{ width: '18rem' }}> */}
+                        <Card className='card'>
+                            <Card.Body>
 
-                                >
+                                {
+                                    isDisplayName && (
 
-                                    <div className='my-intro'>
-                                        A passionate and dedicated software developer with a keen interest in crafting innovative solutions. With a strong foundation in computer science and a love for problem-solving, I embark on every coding journey with enthusiasm and precision. I thrive in the dynamic world of software development, where my skills extend across a range of technologies and frameworks. Whether it's designing efficient algorithms, building scalable applications, or diving into the intricacies of code optimization, I enjoy the challenge of turning ideas into robust and elegant software solutions.
-                                    </div>
+                                        <div className='my-name' style={{ display: isDisplayName }}>
 
-                                </motion.div>
-                            )
-                        }
+                                            {myName.map((el, i) => {
+                                                return (
+                                                    <motion.span
+                                                        initial={{ opacity: 0 }}
+                                                        animate={{ opacity: 1 }}
+                                                        transition={{
+                                                            duration: 0.15,
+                                                            delay: i / 20
 
-                    </Card.Body>
-                </Card>
-            </motion.div>
+                                                        }}
+                                                        onAnimationComplete={() => { console.log("azann"); }}
 
+                                                        key={i}
+                                                    >
+                                                        {el}{""}
+                                                    </motion.span>
+                                                )
+                                            })}
+
+
+
+                                        </div>
+                                    )
+                                }
+                                {
+                                    isNameDisplayed && (
+                                        <motion.div
+
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{
+                                                ease: "easeIn",
+                                                duration: 0.5,
+                                            }}
+
+                                        >
+
+                                            <div className='my-intro'>
+                                                A passionate and dedicated software developer with a keen interest in crafting innovative solutions. With a strong foundation in computer science and a love for problem-solving, I embark on every coding journey with enthusiasm and precision. I thrive in the dynamic world of software development, where my skills extend across a range of technologies and frameworks. Whether it's designing efficient algorithms, building scalable applications, or diving into the intricacies of code optimization, I enjoy the challenge of turning ideas into robust and elegant software solutions.
+                                            </div>
+
+                                        </motion.div>
+                                    )
+                                }
+
+                            </Card.Body>
+                        </Card>
+                    </motion.div>
+                </div>
+            </div>
 
         </>
     )

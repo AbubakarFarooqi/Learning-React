@@ -3,7 +3,9 @@ import React from 'react'
 function Contact() {
     return (
         <>
-            contact
+            <div className='h-screen' style={{ backgroundColor: "transparent" }} >
+                azan
+            </div>
         </>
     )
 }
