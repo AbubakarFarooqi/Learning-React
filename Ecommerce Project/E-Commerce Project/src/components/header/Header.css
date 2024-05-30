@@ -9,6 +9,7 @@
 }
 nav{
     display: flex;
+    margin-top: 10px;
     flex-direction: row;
     justify-content: baseline;
     align-items: baseline;
@@ -30,7 +31,7 @@ nav input{
     margin-left: 30px;
     width: 500px;
     height: 10px;
-    padding: 12px 16px 12px 16px;
+    /* padding: 12px 16px 12px 16px; */
     border-radius: 40px;
     color: black;
     background-color: #F0F0F0;
@@ -45,8 +46,28 @@ nav input:focus{
 .icons{
     margin-left: 30px;
     cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
 }
 .active-nav-link{
     font-weight: bold;
 }
 
+#nav-search{
+    display: flex;
+    position: relative;
+    top:5px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 30px;
+    width: 500px;
+    height: 10px;
+    padding: 12px 16px 12px 0px;
+    border-radius: 40px;
+    color: black;
+    background-color: #F0F0F0;
+    border: 0px;
+}
+.icons:hover{
+    transform: scale(1.1);
+}

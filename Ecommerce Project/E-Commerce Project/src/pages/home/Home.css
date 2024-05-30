@@ -1,0 +1,77 @@
+#home-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F2F0F1;
+    padding: 0px;
+    margin: 0px !important;
+    overflow: hidden;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-etween; */
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+#home-left-section{
+    margin-top: 170px;
+    margin-left: 100px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+    font-size: 60px;
+    line-height: 1;
+
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    opacity: 60%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+button{
+    border-radius: 62px;
+    padding: 16px 54px 16px 54px;
+    width: 210px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+.left-section-span-head{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* .m80{
+    margin-right: 50px;
+} */
+
+.span-under-span-head{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 60%;
+    font-size: 16px;
+}
+.vertical-line {
+    border-left: 2px solid black; /* Adjust the width and color as needed */
+    height: 90px; /* Adjust the height as needed */
+    /* margin: 20px; Optional: for spacing around the line */
+    position: relative;
+    top:-5px;
+    margin: 0px 40px 0px 40px;
+    opacity: 20%;    
+  }
+  .landing-section-img{
+    height: 100vh;
+    /* position: relative; */
+    /* top: 200px; */
+   
+    
+  }

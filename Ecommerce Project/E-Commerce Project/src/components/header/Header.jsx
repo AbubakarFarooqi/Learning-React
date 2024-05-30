@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faUser,faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -31,8 +31,10 @@ function Header() {
                 </NavLink>
             </li>
         </ul>
-
-        <input type="text" name="" id="" placeholder='Search for Products' />
+        <div id = "nav-search">
+            <FontAwesomeIcon className='icons' icon={faSearch} />
+            <input type="text" name="" id="" placeholder='Search for Products' />
+        </div>
         <FontAwesomeIcon className='icons' icon={faCartShopping} />
         <FontAwesomeIcon className='icons' icon={faUser} />
     </nav>
