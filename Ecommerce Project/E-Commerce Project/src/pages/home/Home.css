@@ -164,3 +164,19 @@ p{
     border: 1px solid gray;
     font-size: 16px;
 }
+.new-arrival-img-container{
+    height: 298px;
+    width: 295px;
+    background-color: #F2F0F1;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.new-arrival-img-container img{
+    /* padding: 50px; */
+    height: 80%;
+    width:80%;
+    margin-top: 30px;
+    margin-left: 30px;
+    object-fit: fill;
+}
