@@ -1,3 +1,9 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
 #site-name{
     font-size: 32px;
     text-decoration: none;
@@ -9,15 +15,21 @@
 }
 nav{
     display: flex;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     flex-direction: row;
     justify-content: baseline;
     align-items: baseline;
-    margin-left: 30px;
-    margin-bottom: 30px;
+    /* margin-left: 30px; */
+    /* margin-bottom: 30px; */
 }
-nav ul li{
+.nav-ul li{
     list-style: none;
+}
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+
 }
 .nav-link{
     text-decoration: none;
@@ -27,7 +39,7 @@ nav ul li{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
 }
-nav input{
+#nav-search input{
     margin-left: 30px;
     width: 500px;
     height: 10px;
@@ -37,10 +49,10 @@ nav input{
     background-color: #F0F0F0;
     border: 0px;
 }
-nav input::placeholder{
+#nav-search input::placeholder{
     color: gray;
 }
-nav input:focus{
+#nav-search input:focus{
     outline: none;
 }
 .icons{
@@ -70,4 +82,116 @@ nav input:focus{
 }
 .icons:hover{
     transform: scale(1.1);
+}
+
+
+.toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+    /* border: 1px solid red; */
+    height: 22px;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+.toggle-button:hover{
+    transform: scale(1.1);
+
+}
+.toggle-button div{
+    border-radius: 10px;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+
+.toggle-button-active{
+    display: none;
+
+}
+
+.nav-right-icons{
+    display: flex;
+    position: relative;
+    top: 12px;
+}
+
+.nav-ul-in-active{
+    /* display: none !important; */
+    height: 0px;
+    padding: 0px !important;
+}
+.nav-ul-active{
+    /* display: flex; */
+    height: 120px;
+}
+
+/* .......................css for width 1453px...................... */
+
+@media (max-width: 1453px) {
+    nav{
+        /* width: 100vw !important; */
+        overflow: hidden;
+    }
+    #nav-search input{
+        display: none;
+    }
+    #nav-search{
+        width: auto;
+        background-color: white;
+        top: 0px;
+    }
+    ul{
+        padding: 0px;
+        /* width: 400px; */
+    }
+}
+
+/* .......................css for width 770px...................... */
+
+
+@media (max-width: 770px) {
+    
+
+    .toggle-button-active{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        /* overflow-x: visible; */
+    }
+    .nav-link{
+        margin: 0px;
+    }
+    .nav-ul{
+
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100vw;
+    }
+    .nav-ul li{
+        position: relative;
+        width: 100%;
+
+    }
+    .nav-ul li::after{
+        position: absolute;
+        top: 23px;
+        left: -8px;
+        content: "";
+        height: 2px;
+        background-color: black;
+        width: 100%;
+        opacity: 10%;
+    }
+
+
 }

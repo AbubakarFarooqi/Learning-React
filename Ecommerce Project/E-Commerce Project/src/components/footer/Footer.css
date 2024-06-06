@@ -1,0 +1,124 @@
+
+/* .........Footer Section....... */
+.footer{
+    height: 50vh;
+    background-color: #F0F0F0;
+}
+
+
+
+.footer-divs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+    /* opacity: 70%; */
+    font-size: 16px;
+}
+
+footer h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+footer a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+    /* opacity: 70%; */
+    font-size: 16px;
+}
+/* .a{
+    height: 400px; width: 600px; border: 1px solid red;
+    position: relative;
+    top: 70px;
+    background-color: black;
+} */
+
+.footer-container{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px; 
+    justify-content: space-between;
+}
+.footer-first{
+    width: 300px;
+}
+.footer-icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+}
+.footer-icon{
+    font-size: 20px;
+}
+.footer-above{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 160px;
+     width: 80vw;
+    position: relative;
+    top: 70px;
+    background-color: black;
+    border-radius: 20px;
+    /* padding: 50px; */
+}
+.footer-above span{
+    color: white;
+    line-height: 40px;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+}
+
+.footer-above-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.footer-above-input input{
+    border-radius: 20px;
+    /* height: 30px; */
+    width: 250px;
+    border: 0px;
+    padding: 10px;
+}
+.footer-above-input button{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    /* height: 30px; */
+    width: 270px;
+    border: 0px;
+    padding: 10px;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-etween; */
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.nav-span{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: relative;
+    top:4px;
+}

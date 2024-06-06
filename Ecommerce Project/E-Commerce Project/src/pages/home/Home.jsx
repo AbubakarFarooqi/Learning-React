@@ -38,13 +38,13 @@ function Home() {
     fetchData()
   },[]);
 
-  if(loading){
-    return <h1>Loading</h1>
-  }
+  // if(loading){
+  //   return <h1>Loading</h1>
+  // }
 
-  if (err) {
-    return <h1>Error: {String(err)}</h1>;
-  }
+  // if (err) {
+  //   return <h1>Error: {String(err)}</h1>;
+  // }
   return (
     <>
       <section id = "home-page">
@@ -85,7 +85,7 @@ function Home() {
  <h1>NEW ARRIVALS</h1>
  <div class="flex-row home-page-new-arrival-cards">
 
-
+{/* 
       {products.map(product =>(
 
 <div key={product._id} class="new-arrival-card">
@@ -103,32 +103,25 @@ function Home() {
     <span class="rating-number">N/A</span>
 </div>} 
 
-<span class="new-arrival-price">${product.price}</span>
+<div class="flex-row flex-align-center">
+             <span class="new-arrival-price">${product.price}</span>
+            
+             {(product.discountPercentage
+ !== 0 && product.discountPercentage
+ != null)?<>
+            <del class="strikethrough">
+                 ${product.price - product.price*(product.discountPercentage/100)}
+             </del>
+             <div class="discount">
+                 <span>-{product.discountPercentage}%</span>
+             </div>
+            </>:<></>}
+         </div>
+
 
 </div>
 
-      ))}
-
-{/* 
-
-<div class="new-arrival-card">
-         <div className='new-arrival-img-container'>
-         <img src="http://res.cloudinary.com/dfaxkifoq/image/upload/v1717539055/rheorwieyafdxwqlipb6.png" alt=""/>
-         </div>
-         <h2>T-shirt with Tape Details</h2>
-
-         <div class="div-rating-star">
-            <Rating size={20} initialValue={4.5} readonly = {true} allowFraction = {true}
-      />
-             <span class="rating-number">4.5/5</span>
-         </div>
-
-         <span class="new-arrival-price">$120</span>
-
-     </div>
-
-      
-
+      ))} */}
 
      <div class="new-arrival-card">
          <img src="src\assets\images\Frame 32.png" alt=""/>
@@ -142,10 +135,12 @@ function Home() {
 
          <span class="new-arrival-price">$120</span>
 
-     </div> */}
-     {/* <div class="new-arrival-card">
+     </div> 
+
+      <div class="new-arrival-card">
          <img src="src\assets\images\Frame 33.png" alt=""/>
          <h2>Skinny Fit Jeans</h2>
+
 
          <div class="div-rating-star">
          <Rating size={20} initialValue={3.5} readonly = {true} allowFraction = {true}
@@ -164,6 +159,7 @@ function Home() {
              </div>
          </div>
      </div>
+
      <div class="new-arrival-card">
          <img src="src\assets\images\Frame 34.png" alt=""/>
          <h2>Checked Shirt</h2>
@@ -176,6 +172,7 @@ function Home() {
 
          <span class="new-arrival-price">$180</span>
      </div>
+
      <div class="new-arrival-card">
          <img src="src\assets\images\Frame 38.png" alt=""/>
          <h2>sleeve Striped T-Shirt</h2>
@@ -194,7 +191,7 @@ function Home() {
              </div>
          </div>
          
-     </div> */}
+     </div>
  </div>
  <div className="container-btn-new-arrival">
  <button className='round-button btn-new-arrival'>
@@ -202,11 +199,38 @@ function Home() {
  </button>
  </div>
 
+
+
  
 </section>
 
 
-
+{/* <!-- .................Browse By Dress Style .................... --> */}
+   <section  id = "section-brows-by-dress-style">
+    <h1>
+        BROWSE BY DRESS STYLE
+    </h1>
+        <div class="flex-row sec-browse-by-dress-cards-container">
+            <div class="sec-browse-by-dress-casual">
+                <span>Casual</span>
+                <img src="src\assets\images\casual.png" alt=""/>
+            </div>
+            <div class="sec-browse-by-dress-formal">
+                <span>Formal</span>
+                <img src="src\assets\images\formal.png" alt=""/>
+            </div>
+        </div>
+        <div class="flex-row sec-browse-by-dress-cards-container">
+            <div class="sec-browse-by-dress-formal">
+                <span>Party</span>
+                <img src="src\assets\images\party.png" alt=""/>
+            </div>
+            <div class="sec-browse-by-dress-casual">
+                <span>Gym</span>
+                <img src="src\assets\images\gym.png" alt=""/>
+            </div>
+        </div>
+   </section>
 
 
     </>
