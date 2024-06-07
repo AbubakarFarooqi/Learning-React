@@ -195,3 +195,26 @@ nav{
 
 
 }
+
+
+/* .......................css for width 435px...................... */
+
+@media (max-width: 435px) {
+    .toggle-button{
+        /* margin: opx; */
+        width: 80px;
+        top: 7px;
+    }
+    #site-name{
+        font-size: 1.5rem;
+        font-weight: 1000;
+    }
+
+    nav{
+        /* width: 300px; */
+        position: relative;
+        top: -5px;
+    }
+}
+
+

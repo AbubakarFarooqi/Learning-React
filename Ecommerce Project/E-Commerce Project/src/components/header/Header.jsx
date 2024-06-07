@@ -23,7 +23,7 @@ function Header() {
     <nav>
        
         <NavLink id='site-name' to= "/" > SHOP.CO </NavLink>
-        <ul className={ `${(navUlActive)?'nav-ul nav-ul-active':'nav-ul nav-ul-in-active'}` }>
+        <ul className={ `${(navUlActive)?'nav-ul nav-ul-in-active':'nav-ul nav-ul-active'}` }>
             <li>
                 <NavLink className={({isActive})=>{
                     return `nav-link ${(isActive)?'active-nav-link':''}`

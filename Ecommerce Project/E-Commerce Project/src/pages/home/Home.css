@@ -260,3 +260,54 @@ p{
     margin-left: 85px;
     margin-right: 85px;
 }
+
+
+
+
+
+
+/* .......................css for width 435px...................... */
+
+@media (max-width: 376px) {
+    .home-page-lading-container{
+        flex-direction: column !important;
+    }
+    #home-page h1{
+        font-size: 2rem;
+        
+    }
+    #home-left-section{
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #home-left-section p{
+        margin-bottom: 20px;
+    }
+    #home-left-section button{
+        width: 100%;
+    }
+    .site-counts{
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-counts div{
+        margin-left: 20px;
+    }
+    /* .site-counts .vertical-line:nth-child(2){
+        display: none;
+    } */
+     .hide{
+        display: none;
+
+     }
+     #home-page{
+        height: 140vh;
+     }
+     .home-page-lading-container img{
+        height: 30rem;
+     }
+}
